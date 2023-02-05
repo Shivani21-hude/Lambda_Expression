@@ -24,7 +24,16 @@ namespace LambdaExpressionDemo
             listPersonInCity.ForEach(x => Console.WriteLine("{0}\t",x.Name.ToString()));
 
         }
-       
+        // UC2
+        public static void Retrieving_TopTwoRecord_ForAgels_LessThanSixty(List<Person> listPersonsInCity)
+        {
+            foreach (Person person in listPersonsInCity.FindAll(e => (e.Age < 60)).Take(2).ToList())
+            {
+                Console.WriteLine("Name :" + person.Name + "\t\tAge: " + person.Age);
+            }
+
+        }
+
     }
 }
 
