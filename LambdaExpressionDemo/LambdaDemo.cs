@@ -44,6 +44,12 @@ namespace LambdaExpressionDemo
                 Console.WriteLine("No, we don't have teen-agers in the list");
 
         }
+        //UC4
+        public static void AllPersonsAverageAge(List<Person> listPersonInCity)
+        {
+            double avgAge = listPersonInCity.Average(e => e.Age);
+            Console.WriteLine("The average of all the person's age is :" + avgAge);
+        }
 
 
     }
