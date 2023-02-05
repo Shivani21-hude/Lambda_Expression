@@ -33,6 +33,18 @@ namespace LambdaExpressionDemo
             }
 
         }
+        //UC3
+        public static void CheckingForTeenagerPerson(List<Person> listPersonsInCity)
+        {
+            if (listPersonsInCity.Any(e => e.Age >= 13 && e.Age < 19))
+            {
+                Console.WriteLine("Yes, we have some teen-agers in the list");
+            }
+            else
+                Console.WriteLine("No, we don't have teen-agers in the list");
+
+        }
+
 
     }
 }

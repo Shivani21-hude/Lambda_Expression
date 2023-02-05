@@ -8,6 +8,7 @@ namespace LambdaExpressionDemo
             List<Person> listPersonInCity = new List<Person>();
             LambdaDemo.AddRecords(listPersonInCity);
             LambdaDemo.Retrieving_TopTwoRecord_ForAgels_LessThanSixty(listPersonInCity);
+            LambdaDemo.CheckingForTeenagerPerson(listPersonInCity);
 
             Console.ReadKey();
         }
