@@ -50,6 +50,14 @@ namespace LambdaExpressionDemo
             double avgAge = listPersonInCity.Average(e => e.Age);
             Console.WriteLine("The average of all the person's age is :" + avgAge);
         }
+        //UC5
+        public static void CheckNameExistOrNot(List<Person> listPersonInCity)
+        {
+            if (listPersonInCity.Exists(e => e.Name == "SAM")) ;
+            {
+                Console.WriteLine("Yes, A person having name \"SAM\" exists in our list");
+            }
+        }
 
 
     }
