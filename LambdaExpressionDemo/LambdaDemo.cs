@@ -21,8 +21,8 @@ namespace LambdaExpressionDemo
             listPersonInCity.Add(new Person("203456883", "Mac", "126 Province Ave, Baltimore,NY", 85));
             listPersonInCity.Add(new Person("203456884", "SAM", "126 Province Ave, Baltimore,NY", 95));
             Console.WriteLine(listPersonInCity.ToString());
-            listPersonInCity.ForEach(x => Console.WriteLine("{0}\t",x.Name.ToString()));
-
+            listPersonInCity.ForEach(x => Console.WriteLine("{0}\t",x.Name));
+            Console.WriteLine();
         }
         // UC2
         public static void Retrieving_TopTwoRecord_ForAgels_LessThanSixty(List<Person> listPersonsInCity)
@@ -48,14 +48,20 @@ namespace LambdaExpressionDemo
         public static void AllPersonsAverageAge(List<Person> listPersonInCity)
         {
             double avgAge = listPersonInCity.Average(e => e.Age);
-            Console.WriteLine("The average of all the person's age is :" + avgAge);
+            Console.WriteLine("The average of all the person's age is :" + avgAge); 
         }
-       
+        //UC5
+        public static void CheckNameExistOrNot(List<Person> listPersonInCity)
+        {
+            if (listPersonInCity.Exists(e => e.Name == "SAM")) 
+            {
+                Console.WriteLine("Yes, A person having name \"SAM\" exists in our list");
+            }
+        }
+
 
     }
 }
-
-
 
 
 
