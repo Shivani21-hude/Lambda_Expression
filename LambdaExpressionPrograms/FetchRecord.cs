@@ -24,7 +24,7 @@ namespace LambdaExpressionPrograms
         public static void SortTotalmarksInDescendingOrder(List<Student> student)
         {
             Console.WriteLine("==> Sort total marks in descending order ");
-            var rev =student.OrderByDescending(s=>s.Age);
+            var rev =student.OrderByDescending(s=>s.TotalMarks);
             foreach(Student s in rev)
             {
                 Console.WriteLine(s);
